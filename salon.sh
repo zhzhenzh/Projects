@@ -12,7 +12,6 @@ MAIN_MENU() {
   fi
 #services
   SERVICES=$($PSQL "SELECT service_id, name FROM services")
-  ID=()
   echo "$SERVICES" | while read SERVICE_ID BAR SERVICE_NAME
     do
       echo "$SERVICE_ID) $SERVICE_NAME"
